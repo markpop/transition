@@ -1,0 +1,37 @@
+.transition-slider.feature-1 {
+  top: 0;
+  margin-top: 200px;
+  left: 0;
+  background-color: #04d7d9;
+}
+.transition-slider.feature-2 {
+  top: 100%;
+  margin-top: 200px;
+  left: 0;
+  background-color: #f1b812;
+}
+.transition-slider.feature-3 {
+  top: 200%;
+  margin-top: 200px;
+  left: 0;
+  background-color: #3124c2;
+}
+.transition-slider.feature-4 {
+  top: 300%;
+  margin-top: 200px;
+  left: 0;
+  background-color: #00c3fa;
+}
+header.transition-slider {
+  top: 0;
+  left: 0;
+  height: 200px;
+  background-color: #000;
+}
+footer.transition-slider {
+  top: 400%;
+  margin-top: 200px; 
+  left: 0;
+  height: 200px;
+  background-color: #000;
+}
