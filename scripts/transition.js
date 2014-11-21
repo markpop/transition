@@ -25,7 +25,7 @@ $(function() {
         return arr;
       },
       slider_arr = calculate(),
-      animate = function(delta) {
+      animate = function(delta, wait) {
         if (_timeout || delta === 0) {
           _currentIndex = _currentIndex - delta;
           if (_currentIndex < 0) {
@@ -43,10 +43,12 @@ $(function() {
             '-webkit-transform': 'translate3d(0, '+(-slider_arr[_currentIndex])+'px, 0)',
             'transform': 'translate3d(0, '+(-slider_arr[_currentIndex])+'px, 0)'
           });
-          _timeout = false;
-          setTimeout(function() {
-            _timeout = true;
-          }, 1100);
+          if (!wait) {
+            _timeout = false;
+            setTimeout(function() {
+              _timeout = true;
+            }, 1100);
+          }
         }
       };
   $transition_slider.each(function(index) {
@@ -57,8 +59,9 @@ $(function() {
     }
   });
   $transition_bullets.on('click', 'li', function() {
-    //Todo
-    var index = $(this).attr('data-index');
+    var _index = $(this).attr('data-index'),
+        _len = _currentIndex - _index;
+    animate(_len, true);
   });
   $transition_bullets.append($(str));
   $window.resize(function() {

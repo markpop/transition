@@ -26,12 +26,12 @@ header.transition-slider {
   top: 0;
   left: 0;
   height: 200px;
-  background-color: #000;
+  background-color: #e51c23;
 }
 footer.transition-slider {
   top: 400%;
   margin-top: 200px; 
   left: 0;
   height: 200px;
-  background-color: #000;
+  background-color: #e51c23;
 }
